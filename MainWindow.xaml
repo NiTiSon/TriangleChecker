@@ -1,0 +1,39 @@
+﻿<Window x:Class="TriangleChecker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TriangleChecker"
+        mc:Ignorable="d"
+		SizeToContent="Height"
+        Title="TriangleChecker" Height="220" Width="700"
+		ResizeMode="NoResize"
+		Background="AliceBlue">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="120px" />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition Width="120px" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition Height="50px"/>
+			<RowDefinition Height="20px"/>
+			<RowDefinition Height="90px" />
+		</Grid.RowDefinitions>
+
+		<TextBlock FontSize="22px" TextAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1" Grid.ColumnSpan="3">
+			Введите длинны сторон трёхугольника
+		</TextBlock>
+
+		<TextBox Margin="10px" Grid.Row="1" Grid.Column="1" x:Name="inputBoxA" />
+		<TextBox Margin="10px" Grid.Row="1" Grid.Column="2" x:Name="inputBoxB" />
+		<TextBox Margin="10px" Grid.Row="1" Grid.Column="3" x:Name="inputBoxC" />
+
+		<TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" TextAlignment="Center" x:Name="resultText" />
+
+		<Button Margin="20px" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" MaxWidth="260px" Content="Рассчитать" Click="OnCalculate" />
+	</Grid>
+</Window>

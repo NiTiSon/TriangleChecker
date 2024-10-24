@@ -94,7 +94,11 @@ namespace TriangleChecker
 
 		private void CheckField(char sideName, string fieldContent)
 		{
-			if (fieldContent[0] == '-')
+			if (string.IsNullOrEmpty(fieldContent))
+			{
+				resultText.Text = $"Значение стороны {sideName} не задано.";
+			}
+			else if (fieldContent[0] == '-')
 			{
 				resultText.Text = $"Сторона {sideName} не может быть отрицательной.";
 			}
